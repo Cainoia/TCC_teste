@@ -19,7 +19,8 @@ Este projeto implementa um Gêmeo Digital modular para fins didáticos, demonstr
 
 1. Clone o repositório:
 
-git clone [seu-repositorio]
+git clone 
+
 cd gemeo_digital_tcc
 
 ## Criar e ativar o ambiente virtual:
@@ -33,4 +34,6 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 
 ## Instalar e iniciar o MQTT (Mosquito)
+
+baixar arquivo https://mosquitto.org/download/
 
