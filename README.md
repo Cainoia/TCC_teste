@@ -11,17 +11,16 @@ Este projeto implementa um Gêmeo Digital modular para fins didáticos, demonstr
 - Camada de Analítica (Gráficos e KPIs)
 
 ## Requisitos
+
 - Python 3.9 ou superior
 - Mosquitto (broker MQTT)
 - Webcam
 
 ## Instalação
 
-1. Clone o repositório:
+Clone o repositório:
 
-git clone 
-
-cd gemeo_digital_tcc
+git clone https://github.com/Cainoia/TCC_teste.git
 
 ## Criar e ativar o ambiente virtual:
 
