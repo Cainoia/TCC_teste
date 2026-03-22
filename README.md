@@ -1,5 +1,7 @@
 # Gêmeo Digital Didático - TCC
 
+## Utilizar WSL para fins didáticos
+
 ## Descrição
 Este projeto implementa um Gêmeo Digital modular para fins didáticos, demonstrando os conceitos de:
 - Camada Física (webcam)
