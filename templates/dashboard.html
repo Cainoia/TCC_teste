@@ -178,12 +178,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>🏭 Gêmeo Digital - Fábrica Inteligente</h1>
+        <h1> Gêmeo Digital - Fábrica Inteligente</h1>
         
         <div class="grid">
             <!-- Card: Última Detecção -->
             <div class="card">
-                <h2>📡 Último Evento</h2>
+                <h2> Último Evento</h2>
                 <div class="ultimo-evento" id="ultimoEvento">
                     <h3>Peça Detectada</h3>
                     <div class="objeto">---</div>
@@ -193,27 +193,27 @@
             
             <!-- Card: Contagem por Tipo -->
             <div class="card">
-                <h2>📊 Produção por Tipo</h2>
+                <h2> Produção por Tipo</h2>
                 <div id="contagemLista">
                     <p style="color: #999;">Nenhum dado ainda</p>
                 </div>
                 <div class="total" id="total">Total: 0 peças</div>
-                <button class="btn-reset" onclick="resetContagem()">🔄 Resetar Contagem</button>
+                <button class="btn-reset" onclick="resetContagem()"> Resetar Contagem</button>
             </div>
         </div>
         
         <div class="grid">
             <!-- Card: Gráfico -->
             <div class="card">
-                <h2>📈 Gráfico de Produção</h2>
+                <h2> Gráfico de Produção</h2>
                 <div id="grafico" style="height: 400px;"></div>
             </div>
             
             <!-- Card: Histórico de Eventos -->
             <div class="card">
-                <h2>📜 Histórico em Tempo Real</h2>
+                <h2> Histórico em Tempo Real</h2>
                 <div id="status" style="margin-bottom: 10px;">
-                    <span class="status">🟢 Conectado</span>
+                    <span class="status"> Conectado</span>
                 </div>
                 <div id="historicoLista" class="historico">
                     <p style="color: #999;">Nenhum evento registrado</p>
@@ -258,7 +258,7 @@
                         for (const [objeto, quantidade] of Object.entries(data.contagem)) {
                             html += `
                                 <div class="contagem-item">
-                                    <span class="nome">📦 ${objeto.charAt(0).toUpperCase() + objeto.slice(1)}</span>
+                                    <span class="nome"> ${objeto.charAt(0).toUpperCase() + objeto.slice(1)}</span>
                                     <span class="numero">${quantidade} un.</span>
                                 </div>
                             `;
@@ -279,7 +279,7 @@
                             const hora = new Date(evento.timestamp).toLocaleTimeString();
                             html += `
                                 <div class="historico-item">
-                                    🕐 ${hora} - 
+                                     ${hora} - 
                                     <span class="objeto">${evento.objeto.toUpperCase()}</span> 
                                     (conf: ${evento.confianca})
                                 </div>

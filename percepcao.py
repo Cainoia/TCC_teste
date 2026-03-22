@@ -26,10 +26,10 @@ def conectar_mqtt():
     client = mqtt.Client()
     try:
         client.connect(MQTT_BROKER, MQTT_PORT, 60)
-        print(f"✅ Conectado ao MQTT broker em {MQTT_BROKER}:{MQTT_PORT}")
+        print(f" Conectado ao MQTT broker em {MQTT_BROKER}:{MQTT_PORT}")
         return client
     except Exception as e:
-        print(f"❌ Erro ao conectar MQTT: {e}")
+        print(f" Erro ao conectar MQTT: {e}")
         return None
 
 def publicar_evento(client, objeto, confianca):
@@ -45,7 +45,7 @@ def publicar_evento(client, objeto, confianca):
     }
     
     client.publish(MQTT_TOPIC, json.dumps(evento))
-    print(f"📤 Publicado: {evento}")
+    print(f" Publicado: {evento}")
 
 # ============ PROCESSAMENTO ============
 def processar_frame(frame, client):
@@ -88,8 +88,8 @@ def processar_frame(frame, client):
 
 # ============ MAIN ============
 def main():
-    print("🚀 Iniciando sistema de percepção do Gêmeo Digital")
-    print("📷 Conectando à webcam...")
+    print(" Iniciando sistema de percepção do Gêmeo Digital")
+    print(" Conectando à webcam...")
     
     # Conecta ao MQTT
     mqtt_client = conectar_mqtt()
@@ -100,7 +100,7 @@ def main():
         print("❌ Não foi possível acessar a webcam")
         return
     
-    print("✅ Webcam ativa. Pressione 'q' para sair.")
+    print(" Webcam ativa. Pressione 'q' para sair.")
     
     try:
         while True:
@@ -119,14 +119,14 @@ def main():
                 break
     
     except KeyboardInterrupt:
-        print("\n⏹️ Interrompido pelo usuário")
+        print("\n Interrompido pelo usuário")
     
     finally:
         cap.release()
         cv2.destroyAllWindows()
         if mqtt_client:
             mqtt_client.disconnect()
-        print("👋 Sistema encerrado")
+        print(" Sistema encerrado")
 
 if __name__ == "__main__":
     main()

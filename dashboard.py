@@ -38,7 +38,7 @@ def on_message(client, userdata, msg):
         objeto = evento['objeto']
         contagem_objetos[objeto] = contagem_objetos.get(objeto, 0) + 1
         
-        print(f"📥 Dashboard recebeu: {evento['objeto']}")
+        print(f" Dashboard recebeu: {evento['objeto']}")
         
     except Exception as e:
         print(f"Erro ao processar mensagem MQTT: {e}")
@@ -93,6 +93,6 @@ def api_reset():
     return jsonify({'status': 'resetado'})
 
 if __name__ == '__main__':
-    print("🚀 Dashboard do Gêmeo Digital iniciando...")
-    print("📊 Acesse: http://localhost:5000")
+    print(" Dashboard do Gêmeo Digital iniciando...")
+    print(" Acesse: http://localhost:5000")
     app.run(debug=True, use_reloader=False)
